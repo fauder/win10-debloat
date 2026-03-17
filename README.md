@@ -128,7 +128,7 @@ Run the following in Admin PowerShell to register it:
 
 ```powershell
 $action = New-ScheduledTaskAction -Execute "powershell.exe" `
-    -Argument "-ExecutionPolicy Bypass -WindowStyle Normal -Command `"& 'C:\Sys\Bin\octocamo-debloat.ps1'`""
+    -Argument "-NoExit -ExecutionPolicy Bypass -WindowStyle Normal -Command `"& 'C:\Sys\Bin\octocamo-debloat.ps1'`""
 
 $trigger = New-ScheduledTaskTrigger -Weekly -WeeksInterval 1 -DaysOfWeek Monday -At "12:00"
 
